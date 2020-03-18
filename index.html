@@ -1,16 +1,18 @@
 <!doctype html>
-<html lang="es">
-  <head>
+<html ng-app="myApp" lang="es">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Proyecto 8</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-  <body>
+
+<body ng-controller="MainController">
     <div class="container-fluid py-5" id="portada">
         <nav class="navbar navbar-expand-lg  my-5 col-md-7 col-sm-11 mx-auto px-0 pb-5 pt-0">
             <a class="navbar-brand" href="#">Carting</a>
@@ -20,16 +22,16 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav float-right">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" ng-href="#!" ng-click="myFunc(true)">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Abuout Us</a>
+                        <a class="nav-link" href="#!about" ng-click="myFunc(false)">Abuout Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#!services" ng-click="myFunc(false)">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="#!gallery" ng-click="myFunc(false)">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -40,7 +42,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="col-md-7 col-sm-11 mx-auto px-0 pt-5 mt-5">
+        <div class="col-md-7 col-sm-11 mx-auto px-0 pt-5 mt-5" ng-show="showContact">
             <p class="mx-0 mb-4 col-7 p-0" id="titulo">Ship Anything Around The World</p>
             <p>Donec cursus congue risus, quis varius velit accumsan aliquam.</p>
             <p>Morbi semper nunc in ex lacinia, at lobortis lectus porta</p>
@@ -49,180 +51,58 @@
                     <input type="password" class="form-control py-4" id="inputPassword2" placeholder="Enter Your Email">
                 </div>
                 <button type="submit" class="btn mb-2 py-3 px-5 mt-0"><i class="fa fa-envelope m-0 p-0"></i></button>
-              </form>
+            </form>
+        </div>
+    </div>
+
+    <div ng-view></div>
+
+    <div class="container-fluid text-center" id="testimonials">
+        <div id="contenedor">
+            <div class="row my-5">
+                <div class="col">
+                    <h1>Testimonials</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <i class="fa fa-quote-left fa-2x"></i>
+                </div>
+            </div>
+            <div class="row" style="width: 50%; margin-left: auto; margin-right: auto;">
+                <div class="col">
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit sdfggsgcorrupti perferendis voluptatem atque cupiditate amet aperiam, asperiores eius totam, cumque beatae ullam!</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="images/moni.jpg" alt="" id="imgMoni">
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <p id="moniName">Monica Adriana Barrios</p>
+                    <p>Add some description</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container-fluid">
-        
- 
-        <div class="col-md-7 col-sm-11 mx-auto my-5 text-center" id="divTitulo">
-            <p class="h3">Services</p>
-            <p id="definicion">This is a demo text you may write a brief text here to explain the title</p>
-        </div>
-        <div class="col-md-7 col-sm-11 mx-auto my-5">
-            <div class="card-deck">
-                <div class="card text-center">
-                    <i class="fa fa-ship"></i>
-                    <div class="card-body">
-                        <h5 class="card-title">Sea freight</h5>
-                        <p class="card-text">Perspiciatis unde omnis iste natus doloret ipsum volupte ut accusal ntium dolor remque laudantium, totam dolor.</p>
-                    </div>
-                </div>
-                <div class="card text-center">
-                    <i class="fa fa-truck"></i>
-                    <div class="card-body">
-                        <h5 class="card-title">Truck transport</h5>
-                        <p class="card-text">Perspiciatis unde omnis iste natus doloret ipsum volupte ut accusal ntium dolor remque laudantium, totam dolor.</p>
-                    </div>
-                </div>
-                <div class="card text-center">
-                    <i class="fa fa-plane"></i>
-                    <div class="card-body">
-                        <h5 class="card-title">Air freight</h5>
-                        <p class="card-text">Perspiciatis unde omnis iste natus doloret ipsum volupte ut accusal ntium dolor remque laudantium, totam dolor.</p>
-                    </div>
-                </div>
-              </div>
-        </div>
-        <div class="row justify-content-center" id="row1">
-            <div class="col-md-5">
-                <div class="card" style="width:100%;">
-                  <img src="images/ship.jpg" class="card-img-top" alt="...">
-                  <div class="card-img-overlay">
-                      <h5 style="color: white; font-weight: bold;" >OCEAN FREIGHT</h5>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                   <div class="card" style="width:100%;">
-                  <img src="images/flight.jpg" class="card-img-top" alt="...">
-                  <div class="card-img-overlay">
-                      <h5 style="color: white; font-weight: bold;" >AIR FREIGHT</h5>
-                  </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card-group">
-                          <div class="card">
-                            <img src="images/truck.jpg" class="card-img-top" alt="...">
-                            <div class="card-img-overlay">
-                      <h5 style="color: white; font-weight: bold;">TRUCK</h5>
-                  </div>
-                          </div>
-                          <div class="card">
-                            <img src="images/boat.jpg" class="card-img-top" alt="...">
-                            <div class="card-img-overlay">
-                      <h5 style="color: white; font-weight: bold; position: absolute; bottom: 0; right:0;left: 0;" >SEA</h5>
-                  </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center my-5">
-            <div class="col-md-6" id="col1">
-                <h3>We Provide Safe &amp; Secure Shipping Services</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi sequi, quis quae vitae repellendus ipsum.</p>
-                <div class="row">
-                    <div class="col">
-                         <h1>30K</h1>
-                         <p>Completed</p>
-                    </div>
-                    <div class="col">
-                        <h1>920+</h1>
-                        <p>Satified Clients</p>
-                    </div>
-                </div>
-               
-            </div>
-            <div class="col-md-6">
-                <img src="images/ship2.jpg" class="img-fluid" alt="">
-            </div>
-        </div>
         <div class="row text-center">
-            <div class="col" id="col2">
-                <h1>Our Blog</h1>
+            <div class="col" id="col3">
+                <h1>Advantages</h1>
                 <p>This is a demo text you may write a brief text here to explain the title</p>
             </div>
         </div>
-        <div class="row my-5">
-            <div class="col">
-                <div class="card-deck">
-                  <div class="card">
-                    <img src="images/blog1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Blog1 / Admin / 13 commets</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="images/blog2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur. </p>
-                      <p class="card-text"><small class="text-muted">Blog2 / Admin / 13 commets</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="images/blog3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      <p class="card-text"><small class="text-muted">Blog3 / Admin / 13 commets</small></p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="container-fluid text-center" id="testimonials">
-       <div id="contenedor">
-           <div class="row my-5">
-            <div class="col">
-                <h1>Testimonials</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <i class="fa fa-quote-left fa-2x"></i>
-            </div>
-        </div>
-        <div class="row" style="width: 50%; margin-left: auto; margin-right: auto;">
-            <div class="col">
-                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit sdfggsgcorrupti perferendis voluptatem atque cupiditate amet aperiam, asperiores eius totam, cumque beatae ullam!</h6>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <img src="images/moni.jpg" alt="" id="imgMoni"> 
-            </div>
-        </div>
-        <div class="row my-3">
-            <div class="col">
-                <p id="moniName">Monica Adriana Barrios</p>
-                <p>Add some description</p>
-            </div>
-        </div>
-       </div>
-      </div>
-      <div class="container-fluid">
-          <div class="row text-center">
-              <div class="col" id="col3">
-                  <h1>Advantages</h1>
-                  <p>This is a demo text you may write a brief text here to explain the title</p>
-              </div>
-          </div>
-      </div>
-  
-        
-    
-    
-    
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+    <script src="scripts/angularjs.js"></script>
+    <script src="scripts/route.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
 </html>

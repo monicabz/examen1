@@ -4,14 +4,16 @@
 
 #portada {
     background-image: url("../images/fondoP.jpg");
-    background-position:center;
-	background-repeat:no-repeat;
-    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-box-shadow: 0 3000px rgba(0, 0, 0, 0.65) inset;
     box-shadow: 0 3000px rgba(0, 0, 0, 0.65) inset;
 }
 
-#portada, #portada nav a, #inputEmail i {
+#portada,
+#portada nav a,
+#inputEmail i {
     color: white;
 }
 
@@ -19,11 +21,12 @@
     font-size: 300% !important;
 }
 
-nav > a {
+nav>a {
     font-size: 150% !important;
 }
 
-#inputEmail input, #inputEmail button {
+#inputEmail input,
+#inputEmail button {
     border-radius: 0% !important;
 }
 
@@ -35,7 +38,9 @@ nav > a {
     font-size: small;
 }
 
-#navbarText i, #divTitulo .h3, .card i {
+#navbarText i,
+#divTitulo .h3,
+.card i {
     color: orangered;
 }
 
@@ -50,7 +55,10 @@ nav > a {
     flex-flow: column-reverse;
 }
 
-#divTitulo .h3, #titulo, nav > a, .card-title {
+#divTitulo .h3,
+#titulo,
+nav>a,
+.card-title {
     font-weight: bold;
 }
 
@@ -58,59 +66,74 @@ nav > a {
     border: transparent;
 }
 
-.card-text, #definicion {
+.card-text,
+#definicion {
     color: grey;
 }
 
-
-#row1{
+#row1 {
     text-align: center;
 }
-#row1 h5{
-    color: white; 
-    font-weight: bold; 
-    position: absolute; 
-    bottom: 0; 
-    right:0;
+
+#row1 h5 {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     left: 0;
 }
-#col1{
+
+#col1 {
     background-color: rgba(237, 237, 237, 0.94);
     padding: 3rem;
 }
-#col1 h3{
+
+#col1 h3 {
     font-weight: bold;
 }
-#col1 h1{
+
+#col1 h1 {
     color: #ff2626;
 }
-#col1 p{
+
+#col1 p {
     font-weight: bold;
 }
-#col2 h1,#col3 h1{
+
+#col2 h1,
+#col3 h1 {
     color: #ff2626;
     font-weight: bold;
 }
-.card-body{
+
+.card-body {
     background-color: rgba(237, 237, 237, 0.94);
 }
-#testimonials{
+
+#testimonials {
     background-image: url("../images/boat.jpg");
-    background-position:center;
-	background-repeat:no-repeat;
-    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-box-shadow: 0 3000px rgba(0, 0, 0, 0.4) inset;
     box-shadow: 0 3000px rgba(0, 0, 0, 0.65) inset;
 }
-#imgMoni{
+
+#imgMoni {
     border-radius: 50%;
     width: 6rem
 }
-#testimonials h1,#testimonials i,#testimonials #moniName{
+
+#testimonials h1,
+#testimonials i,
+#testimonials #moniName {
     color: #ff2626;
     font-weight: bold;
 }
-#testimonials h6,#testimonials p{
+
+#testimonials h6,
+#testimonials p {
     color: white;
     font-style: italic;
 }
