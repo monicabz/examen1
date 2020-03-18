@@ -3,10 +3,12 @@
 }
 
 #portada {
-    background-image: url("../images/fondoPrincipal.jpg");
+    background-image: url("../images/fondoP.jpg");
     background-position:center;
 	background-repeat:no-repeat;
     background-size:cover;
+    -webkit-box-shadow: 0 3000px rgba(0, 0, 0, 0.65) inset;
+    box-shadow: 0 3000px rgba(0, 0, 0, 0.65) inset;
 }
 
 #portada, #portada nav a, #inputEmail i {
@@ -42,6 +44,9 @@ nav > a {
 }
 
 #navbarText {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse;
     flex-flow: column-reverse;
 }
 
@@ -55,4 +60,57 @@ nav > a {
 
 .card-text, #definicion {
     color: grey;
+}
+
+
+#row1{
+    text-align: center;
+}
+#row1 h5{
+    color: white; 
+    font-weight: bold; 
+    position: absolute; 
+    bottom: 0; 
+    right:0;
+    left: 0;
+}
+#col1{
+    background-color: rgba(237, 237, 237, 0.94);
+    padding: 3rem;
+}
+#col1 h3{
+    font-weight: bold;
+}
+#col1 h1{
+    color: #ff2626;
+}
+#col1 p{
+    font-weight: bold;
+}
+#col2 h1,#col3 h1{
+    color: #ff2626;
+    font-weight: bold;
+}
+.card-body{
+    background-color: rgba(237, 237, 237, 0.94);
+}
+#testimonials{
+    background-image: url("../images/boat.jpg");
+    background-position:center;
+	background-repeat:no-repeat;
+    background-size:cover;
+    -webkit-box-shadow: 0 3000px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 3000px rgba(0, 0, 0, 0.65) inset;
+}
+#imgMoni{
+    border-radius: 50%;
+    width: 6rem
+}
+#testimonials h1,#testimonials i,#testimonials #moniName{
+    color: #ff2626;
+    font-weight: bold;
+}
+#testimonials h6,#testimonials p{
+    color: white;
+    font-style: italic;
 }
