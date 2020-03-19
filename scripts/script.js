@@ -7,7 +7,8 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'home.html'
         })
         .when('/services', {
-            templateUrl: 'services.html'
+            templateUrl: 'services.html',
+            controller: 'ServicesController'
         })
         .when('/about', {
             templateUrl: 'about.html'
@@ -47,7 +48,7 @@ app.controller('ScrollController', ['$scope', '$location', '$anchorScroll',
 
 
 app.controller('ServicesController', function($scope) {
-    $scope.msg = "I do not love Paris";
+    $scope.showNav = true;
 });
 
 app.controller('GalleryController', function($scope) {
