@@ -123,14 +123,14 @@
                     <div class="col-6 col-md">
                         <h5>LINKS</h5>
                         <br>
-                        <ul class="list-unstyled text-small">
-                            <li><a class="text-muted" href="#!">HOME</a></li>
+                        <ul class="list-unstyled text-small" ng-controller="ScrollController">
+                            <li><a class="text-muted" href="#!" ng-click="gotoBottom(); myFunc(true)">HOME</a></li>
                             <br>
-                            <li><a class="text-muted" href="#!about">ABOUT</a></li>
+                            <li><a class="text-muted" href="#!about" ng-click="gotoBottom(); myFunc(false)">ABOUT</a></li>
                             <br>
-                            <li><a class="text-muted" href="#!gallery">GALLERY</a></li>
+                            <li><a class="text-muted" href="#!gallery" ng-click="gotoBottom(); myFunc(false)">GALLERY</a></li>
                             <br>
-                            <li><a class="text-muted" href="#!services">SERVICES</a></li>
+                            <li><a class="text-muted" href="#!services" ng-click="gotoBottom(); myFunc(false)">SERVICES</a></li>
                             <br>
                             <li><a class="text-muted" href="#">CONTACT US</a></li>
                         </ul>
