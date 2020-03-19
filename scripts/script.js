@@ -24,12 +24,26 @@ app.config(function($routeProvider, $locationProvider) {
 
 //Controllers
 
-app.controller('MainController', function($scope, $location) {
+app.controller('MainController', function($scope, $location, $window) {
     $scope.showContact = $location.url() == '/';
-    $scope.myFunc = function(val) {
+
+    function myFunc(val) {
         $scope.showContact = val;
-    };
+    }
+    $scope.myFunc = myFunc;
 });
+
+app.controller('ScrollController', ['$scope', '$location', '$anchorScroll',
+    function($scope, $location, $anchorScroll) {
+        $scope.gotoBottom = function() {
+            // set the location.hash to the id of
+            // the element you wish to scroll to.
+            $location.hash('portada');
+            // call $anchorScroll()
+            $anchorScroll();
+        };
+    }
+]);
 
 
 app.controller('ServicesController', function($scope) {
