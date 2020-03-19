@@ -137,3 +137,7 @@ nav>a,
     color: white;
     font-style: italic;
 }
+
+#topButton:hover{
+    cursor:pointer;
+}
